@@ -1,4 +1,15 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
+
+body{
+    font-family: 'DINPro-Bold', 'DINPro-Medium', sans-serif;
+    src: url('/fonts/DINPro-Bold.otf');
+    src: url('/fonts/DINPro-Medium.otf');
+    overflow-x: hidden;
+}
+
+@import 'vars';
+@import 'navbar';
+@import 'footer';

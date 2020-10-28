@@ -1,4 +1,12 @@
 <?php
+function theme_prefix_setup() {
+	add_theme_support( 'custom-logo', array(
+		'height'      => 75,
+		'width'       => 300,
+		'flex-width' => true,
+	));
+}
+add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
 function registerMenus() {
     register_nav_menu('primary', 'Header Nav');

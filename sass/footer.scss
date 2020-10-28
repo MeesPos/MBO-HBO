@@ -1,0 +1,17 @@
+footer{
+    background-color: $lightGray;
+}
+
+.refs{
+    margin-top: 10vh;
+    text-align: center;
+    &__buttons{
+        background-color: $darkBlue!important;
+        padding: 13px 30px!important;
+        text-transform: uppercase;
+        color: white!important;
+        border-radius: 21px!important;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
