@@ -24,6 +24,7 @@ body {
   border-radius: 30px 0 0 0;
   font-size: 16px;
   font-weight: bold;
+  margin-right: -1px !important;
 }
 .navbar-nav > li {
   padding: 8px 15px 0 15px;
@@ -43,7 +44,7 @@ body {
 
 .navbar-brand {
   margin-left: 5vw;
-  margin-top: 1vh;
+  margin-top: -3vh;
 }
 
 .login {
@@ -64,9 +65,44 @@ body {
   }
 }
 @media screen and (max-width: 1200px) {
-  .navbar-nav > li {
-    display: block;
+  .navbar-nav {
+    background: none;
+    height: 100vh !important;
+    width: 220px !important;
     float: right;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -3.5px;
+    z-index: 999;
+  }
+  .navbar-nav > li {
+    background-color: #54B9F1;
+    padding: 0px 15px 0 15px;
+    border: 1px solid #707070;
+  }
+  .navbar-nav > li > a {
+    color: white !important;
+    align-items: center;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar {
+    height: 30px;
+  }
+  .navbar-brand, .navbar-toggler {
+    margin-top: -3.5vh;
+  }
+
+  .navbar-brand > img {
+    max-width: 200px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .navbar-brand > img {
+    max-width: 130px;
   }
 }
 .navbar-light .navbar-toggler {
@@ -169,6 +205,10 @@ p {
   .contact__last > .contact__titel {
     margin-top: 0;
   }
+}
+
+#homeHeader {
+  width: 100vw;
 }
 
 /*# sourceMappingURL=themeStyle.css.map */
