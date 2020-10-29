@@ -48,6 +48,10 @@ footer {
   background-color: #F3F3F3;
 }
 
+p {
+  margin-bottom: 0 !important;
+}
+
 .refs {
   margin-top: 10vh;
   text-align: center;
