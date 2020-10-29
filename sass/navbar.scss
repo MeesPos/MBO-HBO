@@ -52,14 +52,33 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {    
     .navbar-nav{
-        
+        background: none;
+        height: 100vh!important;
+        width: 220px!important;
+        float: right;
+        border-radius: 0;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -3.5px;
+        z-index: 999;
         & > li{
-            display: block;
-            float: right;
+            background-color: $lightBlue;
+            padding: 0px 15px 0 15px;
+            border: 1px solid $darkGray;
+            & > a{
+                color: white!important;
+                align-items: center;
+                height: 100%;
+            }
         }
     }
+}
+
+@media screen and (max-width: 500px) {
+    
 }
 
 .navbar-light .navbar-toggler{
