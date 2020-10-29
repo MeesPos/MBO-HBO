@@ -10,12 +10,12 @@
 </head>
 
 <body <?php body_class() ?>>
-    <nav class="userNavbar navbar navbar-expand-lg" id="menuHeader">
+    <nav class="userNavbar navbar navbar-expand-xl navbar-light bg-white" id="menuHeader">
         <a class="navbar-brand" href="<?php echo home_url(); ?>">
             <?php if (has_custom_logo()) {
                 the_custom_logo();
             } else {
-                ?> <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="Het logo van MBO-HBO NHF">
+            ?> <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="Het logo van MBO-HBO NHF">
             <?php } ?>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,7 +26,7 @@
             'theme_location'    => 'primary',
             'depth'             => 2,
             'container'         => 'div',
-            'container_class'   => 'collapse navbar-collapse',
+            'container_class'   => 'collapse navbar-collapse navbar-toggleable-md',
             'container_id'      => 'navbarNav',
             'menu_class'        => 'nav navbar-nav ml-auto',
             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
