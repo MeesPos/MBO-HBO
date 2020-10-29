@@ -114,6 +114,17 @@ body {
 
 footer {
   background-color: #F3F3F3;
+  font-family: "DINPro-Medium", sans-serif;
+  font-weight: 500;
+}
+
+.contact__titel {
+  margin: 20px 0 25px;
+  font-weight: 600;
+}
+
+.contact {
+  margin: 15px 0 25px 0;
 }
 
 p {
@@ -121,17 +132,79 @@ p {
 }
 
 .refs {
-  margin-top: 10vh;
+  margin: auto 0;
   text-align: center;
 }
 .refs__buttons {
   background-color: #275670 !important;
-  padding: 13px 30px !important;
+  padding: 11px 35px !important;
   text-transform: uppercase;
   color: white !important;
   border-radius: 21px !important;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
+  float: right;
+}
+
+.refs__contact-button {
+  margin-left: 17%;
+}
+
+@media screen and (max-width: 992px) {
+  .refs__buttons {
+    float: none;
+    display: block;
+  }
+
+  .refs__contact-button {
+    margin: 0 auto 0 auto;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact {
+    width: 50% !important;
+  }
+
+  .refs__buttons {
+    width: 45%;
+    display: inline-block;
+  }
+
+  .refs__contact-button {
+    margin-right: 9%;
+  }
+}
+@media screen and (max-width: 556px) {
+  .contact {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .refs__buttons {
+    width: 80%;
+    display: inline-block;
+  }
+
+  .refs__contact-button {
+    margin-right: 0%;
+    margin-bottom: 25px;
+  }
+
+  .refs {
+    margin-bottom: 20px;
+  }
+
+  .contact__titel {
+    margin-bottom: 15px;
+  }
+
+  .contact__last {
+    margin-top: 0;
+  }
+  .contact__last > .contact__titel {
+    margin-top: 0;
+  }
 }
 
 #homeHeader {
