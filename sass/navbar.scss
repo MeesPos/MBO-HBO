@@ -35,7 +35,7 @@
     margin-top: -3vh;
 }
 
-.login{
+.launch-login-modal{
     background-color: $darkBlue;
 }
 
@@ -63,7 +63,7 @@
         font-size: 16px;
         font-weight: bold;
         text-align: center;
-        margin-top: -3.5px;
+        margin-top: 33px;
         z-index: 999;
         & > li{
             background-color: $lightBlue;
@@ -83,6 +83,8 @@
         height: 30px;
         &-brand, &-toggler{
             margin-top: -3.5vh;
+        } &-nav{
+            margin-top: 4px;
         }
     }
 
