@@ -19,7 +19,7 @@
 
             <div class="col-lg-6 col-md-4 refs">
                 <a href="#" class="refs__buttons refs__contact-button">Contact</a>
-                <a href="#" class="refs__buttons">Inloggen</a>
+                <a href="#" class="refs__buttons" data-toggle="modal" data-target="#loginModal">Inloggen</a>
             </div>
         </div>
     </div>
@@ -31,8 +31,21 @@
         jQuery(".tab_content_login").hide();
         jQuery("ul.tabs_login li:first").addClass("active_login").show();
         jQuery(".tab_content_login:first").show();
-        jQuery("ul.tabs_login li").click(function() {
-            jQuery("ul.tabs_login li").removeClass("active_login");
+        jQuery("#tabs_login3").click(function() {
+            jQuery("#tabs_login3").removeClass("active_login");
+            jQuery(this).addClass("active_login");
+            jQuery(".tab_content_login").hide();
+            var activeTab = jQuery(this).find("a").attr("href");
+            if (jQuery.browser.msie) {
+                jQuery(activeTab).show();
+            } else {
+                jQuery(activeTab).show();
+            }
+            return false;
+        });
+
+        jQuery("#tabs_login2").click(function() {
+            jQuery("#tabs_login2").removeClass("active_login");
             jQuery(this).addClass("active_login");
             jQuery(".tab_content_login").hide();
             var activeTab = jQuery(this).find("a").attr("href");

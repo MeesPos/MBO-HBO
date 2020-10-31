@@ -37,34 +37,38 @@
     <div class="blueBorder"></div>
 
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div id="login-register-password">
                     <?php global $user_ID, $user_identity;
                     if (!$user_ID) { ?>
                         <ul class="tabs_login">
-                            <li class="active_login"><a href="#tab1_login">Inloggen</a></li>
-                            <li><a href="#tab3_login">Wachtwoord vergeten?</a></li>
+                            <!-- <li class="active_login" id="tabs_login2"><a href="#tab1_login">Inloggen</a></li> -->
                         </ul>
 
                         <div class="tab_container_login">
                             <div id="tab1_login" class="tab_content_login">
-                                <?php $reset = $_GET['reset'];
-                                if ($reset == true) { ?>
-                                    <h3>Gelukt!</h3>
-                                    <p>Bekijk je mail om je wachtwoord te wijzigen!</p>
-                                <?php } else { ?>
-                                    <h3>Heb je al een account?</h3>
-                                    <p>Log dan hier in!</p>
-                                <?php } ?>
+                                <div class="modal-header">
+                                    <?php $reset = $_GET['reset'];
+                                    if ($reset == true) { ?>
+                                        <h5>Gelukt!</h5>
+                                        <p>Bekijk je mail om je wachtwoord te wijzigen!</p>
+                                    <?php } else { ?>
+                                        <h5>INLOGGEN</h5>
+                                    <?php } ?>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
 
                                 <form method="post" action="<?php bloginfo('url') ?>/wp-login.php" class="wp-user-form">
                                     <div class="username">
-                                        <label for="user_login"><?php _e('Username'); ?>: </label>
+                                        <label for="user_login"><?php _e('Username'); ?> </label>
                                         <input type="text" name="log" value="<?php echo esc_attr(stripslashes($user_login)); ?>" size="20" id="user_login" tabindex="11" />
                                     </div>
                                     <div class="password">
-                                        <label for="user_pass"><?php _e('Password'); ?>: </label>
+                                        <label for="user_pass"><?php _e('Password'); ?> </label>
                                         <input type="password" name="pwd" value="" size="20" id="user_pass" tabindex="12" />
                                     </div>
                                     <div class="login_fields">
@@ -73,17 +77,18 @@
                                                 <input type="checkbox" name="rememberme" value="forever" checked="checked" id="rememberme" tabindex="13" /> Onthouden
                                             </label>
                                         </div>
+
+                                        <li id="tabs_login3"><a href="#tab3_login">Wachtwoord vergeten?</a></li>
                                         <?php do_action('login_form'); ?>
-                                        <input type="submit" name="user-submit" value="<?php _e('Inloggen'); ?>" tabindex="14" class="user-submit" />
-                                        <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>" />
-                                        <input type="hidden" name="user-cookie" value="1" />
                                     </div>
+                                    <input type="submit" name="user-submit" value="<?php _e('Inloggen'); ?>" tabindex="14" class="user-submit" />
+                                    <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>" />
+                                    <input type="hidden" name="user-cookie" value="1" />
                                 </form>
                             </div>
 
-                            <div id="tab3_login" class="tab_content_login" style="display:none;">
-                                <h3>Wachtwoord vergeten?</h3>
-                                <p>Voor je gebruikersnaam of email adres in voor het resetten van uw wachtwoord!</p>
+                            <div id="tab3_login" class="vergetenwachtwoord tab_content_login" style="display:none;">
+                                <h5>Wachtwoord vergeten?</h5>
                                 <form method="post" action="<?php echo site_url('wp-login.php?action=lostpassword', 'login_post') ?>" class="wp-user-form">
                                     <div class="username">
                                         <label for="user_login" class="hide"><?php _e('Gebruikersnaam'); ?>: </label>
@@ -91,11 +96,13 @@
                                     </div>
                                     <div class="login_fields">
                                         <?php do_action('login_form', 'resetpass'); ?>
-                                        <input type="submit" name="user-submit" value="<?php _e('Wijzig mijn wachtwoord!'); ?>" class="user-submit" tabindex="1002" />
+                                        <input type="submit" name="user-submit" value="<?php _e('Wijzigen'); ?>" class="user-submit" tabindex="1002" />
                                         <?php $reset = $_GET['reset'];
                                         if ($reset == true) {
                                             echo '<p>Bekijk je mail om je wachtwoord te wijzigen!</p>';
                                         } ?>
+
+                                        <li class="active_login" id="tabs_login2"><a href="#tab1_login">Terug naar Inloggen</a></li>
                                         <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>?reset=true" />
                                         <input type="hidden" name="user-cookie" value="1" />
                                     </div>
