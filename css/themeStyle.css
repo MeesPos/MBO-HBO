@@ -215,6 +215,22 @@ p {
   width: 100vw;
 }
 
+.actueel-post {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+.actueel-post > h3 {
+  font-weight: bold;
+}
+.actueel-post > h3 > a {
+  color: #275670;
+}
+.actueel-post a {
+  color: #54B9F1;
+  font-weight: 600;
+  font-size: 20px;
+}
+
 .modal-content {
   border-radius: 60px !important;
   padding: 2% 10%;
