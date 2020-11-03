@@ -445,7 +445,7 @@ p {
 .na-inlog__blue-nav {
   display: flex;
   flex-direction: column;
-  flex: 1 1 33%;
+  flex: 1 1 25%;
   border: 1px solid #707070;
   border-left: none;
 }
@@ -486,7 +486,7 @@ p {
 
 .blue-nav__item-div {
   background-color: #8EC7E0;
-  padding: 26px;
+  padding: 27px;
   cursor: pointer;
 }
 .blue-nav__item-div > img {
@@ -496,7 +496,7 @@ p {
 .blue-nav__item-div > p {
   display: inline-block;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   margin-left: 30px;
   font-family: "DINPro-Bold", "DINPro-Medium", sans-serif;
@@ -507,7 +507,7 @@ p {
 }
 
 .na-inlog__right-container {
-  flex: 2 2 66%;
+  flex: 2 2 75%;
   border: 1px solid #707070;
   border-right: none;
   border-left: none;
@@ -557,27 +557,35 @@ p {
   font-size: 18px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   .na-inlog__blue-nav {
-    flex: 1 1 40%;
+    flex: 1 1 33%;
   }
 
   .na-inlog__right-container {
-    flex: 2 2 60%;
+    flex: 2 2 66%;
   }
 
   .nav__uitlog-container > .uitlog-knop__knop {
     width: 30%;
   }
 
+  .upload-button__text {
+    font-size: 20px;
+  }
+
+  .blue-nav__item-div {
+    padding: 32px;
+    padding-left: 28px;
+  }
   .blue-nav__item-div > img {
     width: 30px;
   }
   .blue-nav__item-div > p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1090px) {
   .na-inlog__container {
     display: flex;
     flex-direction: column;
@@ -598,6 +606,14 @@ p {
     display: block;
   }
 
+  .blue_nav__upload-div {
+    flex: 1 1 25%;
+  }
+
+  .blue-nav__item-div {
+    flex: 1 1 15%;
+    height: 95px;
+  }
   .blue-nav__item-div > p {
     display: none;
   }

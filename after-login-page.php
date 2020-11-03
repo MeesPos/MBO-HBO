@@ -25,7 +25,7 @@
 
         <form class="nav__form">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search this blog">
+                <input type="text" class="form-control" placeholder="Zoeken">
                 <div class="input-group-append">
                     <button class="btn nav__search-icon" type="button">
                         <i class="fa fa-search"></i>
