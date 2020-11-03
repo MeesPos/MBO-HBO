@@ -22,7 +22,7 @@
             ?> <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="Het logo van MBO-HBO NHF">
             <?php } ?>
         </a>
-
+        
         <form class="nav__form">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Zoeken">
@@ -34,8 +34,9 @@
             </div>
         </form>
         <div class="nav__uitlog-container">
+            <i class="fas fa-bars mobile-hamburger-menu"></i>
             <p class="nav__sectorgroep">Juridisch</p>
-            <a class="refs__buttons uitlog-knop__knop">Uitloggen</a>
+            <p class="refs__buttons uitlog-knop__knop">Uitloggen</p>
         </div>
 
         <div class="navigatie__na-login--disable">
