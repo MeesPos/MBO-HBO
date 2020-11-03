@@ -639,7 +639,6 @@ p {
     display: none;
   }
 }
-
 @media screen and (max-width: 750px) {
   .nav__uitlog-container {
     display: grid;
@@ -772,7 +771,7 @@ p {
     margin-top: 7.5vw;
     width: 70vw;
   }
-
+}
 .user_logo {
   width: 100px;
   height: 100px;
@@ -870,7 +869,52 @@ p {
   color: #275670;
   margin-left: 50%;
   margin-top: 3px;
+}
 
+@media screen and (max-width: 767px) {
+  .searchblock .col-md-5 {
+    max-width: 150px;
+    width: auto;
+  }
+  .searchblock .col-md-6 {
+    width: 60vw;
+  }
+
+  .contact_person .col-md-2 {
+    max-width: 130px;
+    width: auto;
+  }
+  .contact_person .col-md-8 {
+    width: 60vw;
+  }
+
+  .active_person .col-md-2 {
+    max-width: 130px;
+    width: auto;
+    margin-left: 3.5%;
+  }
+  .active_person .col-md-8 {
+    width: 60vw;
+  }
+
+  .send_chat {
+    position: relative;
+    margin-top: 30vh;
+  }
+  .send_chat .col-md-2 {
+    max-width: 100px;
+    width: auto;
+  }
+  .send_chat .col-md-9 {
+    max-width: 85vw;
+    width: auto;
+  }
+}
+@media screen and (max-width: 330px) {
+  .box {
+    width: 250px;
+    margin: 10px;
+  }
 }
 
 /*# sourceMappingURL=themeStyle.css.map */
