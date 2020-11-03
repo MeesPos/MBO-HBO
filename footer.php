@@ -19,7 +19,12 @@
 
             <div class="col-lg-6 col-md-4 refs">
                 <a href="#" class="refs__buttons refs__contact-button">Contact</a>
-                <a href="#" class="refs__buttons" data-toggle="modal" data-target="#loginModal">Inloggen</a>
+
+                <?php if (is_user_logged_in()) { ?>
+                    <a href="http://localhost/wordpress/wp-login.php?action=logout" class="refs__buttons">Uitloggen</a>
+                <?php } else { ?>
+                    <a href="#" class="refs__buttons" data-toggle="modal" data-target="#loginModal">Inloggen</a>
+                <?php } ?>
             </div>
         </div>
     </div>

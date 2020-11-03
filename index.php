@@ -1,10 +1,21 @@
 <?php get_header(); ?>
-    <header>
-        <img class="homeHeader" src="<?php echo get_template_directory_uri() . '/img/homeHeader.jpg' ?>" alt="Leerlingen van een school - MBO HBO NHF">
-        <div class="blueBorder"></div>
-    </header>
 
-    <div class="homeContent">
-        <?php the_content(); ?>
+<div class="container-fluid">
+    <div class="row">
+        <?php if (have_posts()) :
+            while (have_posts()) : the_post(); ?>
+                <div class="col-md-6 actueel-post">
+                    <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+                    <div><?php the_excerpt() ?></div>
+                    <a href="<?php the_permalink() ?>">Lees Meer ></a>
+                </div>
+            <?php endwhile;
+        else : ?>
+            <p>Geen berichten gevonden!</p>
+        <?php endif; ?>
     </div>
-<?php get_footer(); ?>
+</div>
+
+
+
+    <?php get_footer(); ?>
