@@ -1,0 +1,98 @@
+.user_logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $lightBlue;
+    margin-left: 15%;
+}
+
+.contact_logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $lightBlue;
+    margin-left: 15%;
+}
+
+.searchblock{
+    padding: 5% 0;
+    border-bottom: 1px solid $darkGray;
+}
+
+.chats_sidebar{
+    display: grid;
+    grid-template-rows: 1fr auto auto auto auto;
+    border-right: 1px solid $darkGray;
+}
+
+.contact_person{
+    border-bottom: 1px solid $darkGray;
+    height: 82px;
+    &:nth-child(7n) {
+        border: none;
+    }
+}
+
+.active_person{
+    background-color: $grayBlue;
+    width: 100%;
+    padding: 3% 0;
+}
+
+.box {
+    width: 300px;
+    margin: 20px;
+    background: $chatGray;
+    position:relative;
+    border-radius: 16px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.sb1:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid $chatGray;
+    border-top: 10px solid $chatGray;
+    border-bottom: 10px solid transparent;
+    left: -8px;
+    top: 0px;
+}
+
+.box > span{
+    float: right;
+    margin-top: -10px;
+    margin-left: -10px;
+    color: #909090;
+}
+
+.sb2:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid $chatGray;
+    border-right: 10px solid transparent;
+    border-top: 10px solid $chatGray;
+    border-bottom: 10px solid transparent;
+    right: -8px;
+    top: 0px;
+}
+
+.send_chat{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: $grayBlue;
+    padding: 2% 0;
+}
+
+.fa-folder-plus {
+    font-size: 30px;
+    color: $darkBlue;
+    margin-left: 50%;
+    margin-top: 3px;
+}
