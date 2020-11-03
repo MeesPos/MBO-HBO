@@ -570,7 +570,8 @@ p {
   }
 
   .nav__uitlog-container > .uitlog-knop__knop {
-    width: 30%;
+    width: 60%;
+    padding: 10px 15px !important;
   }
 
   .upload-button__text {
@@ -586,6 +587,12 @@ p {
   }
   .blue-nav__item-div > p {
     font-size: 18px;
+  }
+}
+@media screen and (max-width: 1090px) {
+  .nav__uitlog-container > .uitlog-knop__knop {
+    width: 80%;
+    padding: 10px 7px !important;
   }
 }
 @media screen and (max-width: 1090px) {
