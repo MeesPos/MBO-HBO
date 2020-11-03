@@ -100,9 +100,9 @@
     </div>
     <script>
         // Declare buttons
-        let documentButtonDiv   = document.getElementById('documentModule');
-        let chatButtonDiv       = document.getElementById('chatModule');
-        let activeButton        = ' ';
+        let documentButtonDiv = document.getElementById('documentModule');
+        let chatButtonDiv = document.getElementById('chatModule');
+        let activeButton = ' ';
 
 
         function loadChat() {
@@ -122,7 +122,7 @@
             xhttp.open("GET", "<?php echo get_template_directory_uri() . '/chat.php' ?>", true);
             xhttp.send();
         }
-        
+
         function loadDocs() {
             // If first load -> set activeButton and add modifier
             if (activeButton == ' ') {
@@ -135,14 +135,14 @@
                 activeButton.classList.add('blue-nav__item-div--active')
             }
 
-            
+
             let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("ajaxPage").innerHTML = this.responseText;
                     fillEmptyFolderIcons();
                 }
-                
+
             };
             xhttp.open("GET", "<?php echo get_template_directory_uri() . '/documenten.php' ?>", true);
             xhttp.send();
@@ -154,7 +154,6 @@
         }
 
         loadDocs();
-
-
     </script>
+    
     <?php get_footer(); ?>
