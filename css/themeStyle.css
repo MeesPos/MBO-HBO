@@ -639,7 +639,6 @@ p {
     display: none;
   }
 }
-
 @media screen and (max-width: 750px) {
   .nav__uitlog-container {
     display: grid;
@@ -772,7 +771,7 @@ p {
     margin-top: 7.5vw;
     width: 70vw;
   }
-
+}
 .user_logo {
   width: 100px;
   height: 100px;
@@ -870,7 +869,6 @@ p {
   color: #275670;
   margin-left: 50%;
   margin-top: 3px;
-
 }
 
 /*# sourceMappingURL=themeStyle.css.map */
