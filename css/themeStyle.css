@@ -486,7 +486,7 @@ p {
 
 .blue-nav__item-div {
   background-color: #8EC7E0;
-  padding: 26px;
+  padding: 27px;
   cursor: pointer;
 }
 .blue-nav__item-div > img {
@@ -570,6 +570,14 @@ p {
     width: 30%;
   }
 
+  .upload-button__text {
+    font-size: 20px;
+  }
+
+  .blue-nav__item-div {
+    padding: 32px;
+    padding-left: 28px;
+  }
   .blue-nav__item-div > img {
     width: 30px;
   }
@@ -577,7 +585,7 @@ p {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 1090px) {
   .na-inlog__container {
     display: flex;
     flex-direction: column;
