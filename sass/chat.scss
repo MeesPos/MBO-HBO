@@ -96,3 +96,52 @@
     margin-left: 50%;
     margin-top: 3px;
 }
+
+@media screen and (max-width: 767px) {
+    .searchblock{
+        & .col-md-5{
+            max-width: 150px;
+            width: auto;
+        } & .col-md-6{
+            width: 60vw;
+        }
+    }
+
+    .contact_person{
+        & .col-md-2{
+            max-width: 130px;
+            width: auto;
+        } & .col-md-8 {
+            width: 60vw;
+        }
+    }
+
+    .active_person{
+        & .col-md-2{
+            max-width: 130px;
+            width: auto;
+            margin-left: 3.5%;
+        } & .col-md-8{
+            width: 60vw;
+        }
+    }
+
+    .send_chat{
+        position: relative;
+        margin-top: 30vh;
+        & .col-md-2{
+            max-width: 100px;
+            width: auto;
+        } & .col-md-9{
+            max-width: 85vw;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .box{
+        width: 250px;
+        margin: 10px;
+    }
+}
