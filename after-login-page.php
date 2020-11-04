@@ -60,7 +60,7 @@
 
     <div class="na-inlog__container">
         <div class="na-inlog__blue-nav">
-            <div class="blue-nav__upload-div">
+            <div class="blue-nav__upload-div" onclick="loadUpload()">
                 <img src="<?php echo get_template_directory_uri() . '/img/icons/upload-icon.png' ?>" alt="upload icoon" class="upload-button__icon-mobile">
 
                 <div class="upload-div__upload-button">
@@ -123,6 +123,20 @@
             xhttp.send();
         }
 
+        function loadUpload() {
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("ajaxPage").innerHTML =
+                    this.responseText;
+                    fillEmptyUploadIcons();
+            }
+        };
+        xhttp.open("GET", "<?php echo get_template_directory_uri() . '/doc-upload.php' ?>", true);
+        xhttp.send();
+        }
+
         function loadDocs() {
             // If first load -> set activeButton and add modifier
             if (activeButton == ' ') {
@@ -152,6 +166,21 @@
             let imgFolderIcons = document.querySelectorAll('.folder-icon');
             imgFolderIcons.forEach(folderIcon => folderIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/folder-icon.png' ?>');
         }
+
+        function fillEmptyUploadIcons() {
+            let imgArrowIcon = document.getElementById('arrowIcon');
+            imgArrowIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/arrow-icon.png' ?>';
+
+            let imgDocumentIcon = document.getElementById('documentIcon');
+            imgDocumentIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/document-icon.png' ?>';
+        }
+
+        
+
+            function getNotification() {
+                let notification = document.getElementById('notification');
+                notification.style.display = 'block';
+            }
 
         loadDocs();
     </script>
