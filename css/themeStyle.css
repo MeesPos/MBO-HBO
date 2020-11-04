@@ -231,6 +231,15 @@ p {
   font-size: 20px;
 }
 
+.blogContent {
+  width: 75vw;
+  margin: 3vh auto;
+}
+.blogContent h1 {
+  font-weight: bold;
+  color: #275670;
+}
+
 .modal-content {
   border-radius: 60px !important;
   padding: 2% 10%;
