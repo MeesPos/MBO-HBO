@@ -22,7 +22,7 @@
             ?> <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="Het logo van MBO-HBO NHF">
             <?php } ?>
         </a>
-        
+
         <form class="nav__form">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Zoeken">
@@ -97,7 +97,27 @@
         <div class="na-inlog__right-container" id="ajaxPage">
             <!-- AJAX -->
         </div>
+    </div><!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Instructie video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="<?php echo get_template_directory_uri() . '/videos/laptopVideo.mp4' ?>" title="Laptop instructie video" class="laptopVideo" autoplay="off"></iframe>
+                    <iframe src="<?php echo get_template_directory_uri() . '/videos/telefoonVideo.mp4' ?>" title="Telefoon instructie video" class="telefoonVideo" autoplay="off"></iframe>
+
+                </div>
+            </div>
+        </div>
     </div>
+
     <script>
         // Declare buttons
         let documentButtonDiv = document.getElementById('documentModule');
@@ -125,16 +145,16 @@
 
         function loadUpload() {
 
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ajaxPage").innerHTML =
-                    this.responseText;
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajaxPage").innerHTML =
+                        this.responseText;
                     fillEmptyUploadIcons();
-            }
-        };
-        xhttp.open("GET", "<?php echo get_template_directory_uri() . '/doc-upload.php' ?>", true);
-        xhttp.send();
+                }
+            };
+            xhttp.open("GET", "<?php echo get_template_directory_uri() . '/doc-upload.php' ?>", true);
+            xhttp.send();
         }
 
         function loadDocs() {
@@ -175,14 +195,19 @@
             imgDocumentIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/document-icon.png' ?>';
         }
 
-        
+        jQuery(document).ready(function() {
+        setTimeout(function() {
+            jQuery('#openVideo').click();
+        }, 5000);
+    });
 
-            function getNotification() {
-                let notification = document.getElementById('notification');
-                notification.style.display = 'block';
-            }
+        function getNotification() {
+            let notification = document.getElementById('notification');
+            notification.style.display = 'block';
+        }
+
 
         loadDocs();
     </script>
-    
+
     <?php get_footer(); ?>
