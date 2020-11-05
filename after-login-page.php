@@ -97,22 +97,31 @@
         <div class="na-inlog__right-container" id="ajaxPage">
             <!-- AJAX -->
         </div>
-    </div>
-    <div class="modal fade" id="nieuwsbriefModal" tabindex="-1" role="dialog" aria-labelledby="nieuwsbriefModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    </div><!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    <h5 class="modal-title" id="exampleModalLabel">Instructie video</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Hier moeten de videos</p>
-                    
+                    <iframe src="<?php echo get_template_directory_uri() . '/videos/laptopVideo.mp4' ?>" title="Laptop instructie video" class="laptopVideo" autoplay="off"></iframe>
+                    <iframe src="<?php echo get_template_directory_uri() . '/videos/telefoonVideo.mp4' ?>" title="Telefoon instructie video" class="telefoonVideo" autoplay="off"></iframe>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
         // Declare buttons
         let documentButtonDiv = document.getElementById('documentModule');
@@ -190,18 +199,17 @@
             imgDocumentIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/document-icon.png' ?>';
         }
 
-
+        jQuery(document).ready(function() {
+        setTimeout(function() {
+            jQuery('#openVideo').click();
+        }, 5000);
+    });
 
         function getNotification() {
             let notification = document.getElementById('notification');
             notification.style.display = 'block';
         }
 
-        $(document).ready(function() {
-            setTimeout(function() {
-                $('#nieuwsbriefModal').modal();
-            }, 5000);
-        });
 
         loadDocs();
     </script>
