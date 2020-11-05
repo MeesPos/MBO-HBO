@@ -114,10 +114,6 @@
                     <iframe src="<?php echo get_template_directory_uri() . '/videos/telefoonVideo.mp4' ?>" title="Telefoon instructie video" class="telefoonVideo" autoplay="off"></iframe>
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
             </div>
         </div>
     </div>
