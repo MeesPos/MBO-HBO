@@ -99,24 +99,6 @@
         </div>
     </div><!-- Button trigger modal -->
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Instructie video</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <iframe src="<?php echo get_template_directory_uri() . '/videos/laptopVideo.mp4' ?>" title="Laptop instructie video" class="laptopVideo" autoplay="off"></iframe>
-                    <iframe src="<?php echo get_template_directory_uri() . '/videos/telefoonVideo.mp4' ?>" title="Telefoon instructie video" class="telefoonVideo" autoplay="off"></iframe>
-
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script>
         // Declare buttons
@@ -195,11 +177,6 @@
             imgDocumentIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/document-icon.png' ?>';
         }
 
-        jQuery(document).ready(function() {
-        setTimeout(function() {
-            jQuery('#openVideo').click();
-        }, 5000);
-    });
 
         function getNotification() {
             let notification = document.getElementById('notification');

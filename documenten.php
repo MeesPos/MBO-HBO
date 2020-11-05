@@ -1,9 +1,6 @@
 <div class="page-part__documenten-module">
     <div class="documenten-module__title-div">
         <p class="documenten-module__title">ALLE DOCUMENTEN</p>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="openVideo" class="open-video-modal" style="display:none;">
-        </button>
-
     </div>
 
     <div class="documenten-module__documenten-header">
