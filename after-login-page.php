@@ -22,7 +22,7 @@
             ?> <img src="<?php echo get_template_directory_uri() . '/img/logo.png' ?>" alt="Het logo van MBO-HBO NHF">
             <?php } ?>
         </a>
-        
+
         <form class="nav__form">
             <div class="input-group">
                 <input type="text" class="form-control" placeholder="Zoeken">
@@ -98,6 +98,21 @@
             <!-- AJAX -->
         </div>
     </div>
+    <div class="modal fade" id="nieuwsbriefModal" tabindex="-1" role="dialog" aria-labelledby="nieuwsbriefModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Hier moeten de videos</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         // Declare buttons
         let documentButtonDiv = document.getElementById('documentModule');
@@ -125,16 +140,16 @@
 
         function loadUpload() {
 
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("ajaxPage").innerHTML =
-                    this.responseText;
+            let xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("ajaxPage").innerHTML =
+                        this.responseText;
                     fillEmptyUploadIcons();
-            }
-        };
-        xhttp.open("GET", "<?php echo get_template_directory_uri() . '/doc-upload.php' ?>", true);
-        xhttp.send();
+                }
+            };
+            xhttp.open("GET", "<?php echo get_template_directory_uri() . '/doc-upload.php' ?>", true);
+            xhttp.send();
         }
 
         function loadDocs() {
@@ -175,14 +190,20 @@
             imgDocumentIcon.src = '<?php echo get_template_directory_uri() . '/img/icons/document-icon.png' ?>';
         }
 
-        
 
-            function getNotification() {
-                let notification = document.getElementById('notification');
-                notification.style.display = 'block';
-            }
+
+        function getNotification() {
+            let notification = document.getElementById('notification');
+            notification.style.display = 'block';
+        }
+
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('#nieuwsbriefModal').modal();
+            }, 5000);
+        });
 
         loadDocs();
     </script>
-    
+
     <?php get_footer(); ?>
